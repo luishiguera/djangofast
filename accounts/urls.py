@@ -1,5 +1,14 @@
 from django.urls import path
-from accounts.views import Home, SignUp, Login, Logout, ChangePassword, ChangePasswordDone, ResetPassword, ResetPasswordDone, ResetPasswordConfirm, ResetPasswordComplete
+from accounts.views import Home
+from accounts.views import SignUp
+from accounts.views import Login
+from accounts.views import Logout
+from accounts.views import ChangePassword
+from accounts.views import ChangePasswordDone
+from accounts.views import ResetPassword
+from accounts.views import ResetPasswordDone
+from accounts.views import ResetPasswordConfirm
+from accounts.views import ResetPasswordComplete
 
 app_name = 'accounts'
 urlpatterns = [
