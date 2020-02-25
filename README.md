@@ -21,21 +21,21 @@
 
 ## Setup
 Python 3 and Virtual environment are already installed.
-```python
+```
 $ git clone https://github.com/luishiguera/djangofast.git
 $ cd djangofast
 $ pip install -r requirements.txt
 ```
 Migrate
-```python
+```
 (env) $ python manage.py makemigrations accounts
 (env) $ python manage.py migrate
 ```
 Create superuser
-```python
+```
 (env) $ python manage.py createsuperuser
 ```
 Runserver
-```python
+```
 (env) $ python manage.py runserver
 ```
