@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'accounts',
+
+    # third party
+    'debug_toolbar',
 ]
 
 MIDDLEWARE = [
@@ -46,6 +49,7 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
@@ -57,7 +61,7 @@ URL_TEMPLATES = os.path.join(BASE_DIR, 'templates')
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [URL_TEMPLATE],
+        'DIRS': [URL_TEMPLATES],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -139,3 +143,8 @@ AUTHENTICATION_BACKENDS = ['accounts.backends.CustomBackend']
 # python -m smtpd -n -c DebuggingServer localhost:1010
 EMAIL_HOST = 'localhost'
 EMAIL_PORT = 1010
+
+# django-toolbar
+INTERNAL_IPS = [
+    '127.0.0.1',
+]
