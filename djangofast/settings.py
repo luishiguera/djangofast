@@ -52,7 +52,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'djangofast.urls'
 
-URL_TEMPLATE = os.path.join(BASE_DIR, 'templates')
+URL_TEMPLATES = os.path.join(BASE_DIR, 'templates')
 
 TEMPLATES = [
     {

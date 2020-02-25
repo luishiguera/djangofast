@@ -1,3 +1,4 @@
+# Or accounts import views / views.Home...
 from django.urls import path
 from accounts.views import Home
 from accounts.views import SignUp
